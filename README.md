@@ -1,4 +1,8 @@
 # Archivagesfront
+///----Sidy Laye---------------------------------------------///
+Pour rappel le style est gérer par des lien bootstrap online du coup faut se connecter pour sen apercevoir après on va l'impoter on a tenter d'installer le module bootstap dans le project ça ne réagit pas comme on le souhaite ....
+
+/--------------------------------------------------------------------/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
