@@ -1,1 +1,88 @@
-<p>register works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Kodinger">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!--title>My Login Page &mdash; Bootstrap 4 Login Page Snippet</title-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body class="mt-4">
+	<section class="h-100 mt-4">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+					<div class="card fat mb-4">
+						<div class="card-body">
+							<h4 align=center class="card-title">Register Page</h4>
+							<form method="POST"  novalidate="">
+								<div class="form-group">
+									<label for="name">Nom</label>
+									<input id="name" type="text" class="form-control" name="name" required autofocus>
+									<div class="invalid-feedback">
+										Quel est votre nom?
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="prenom">Prénom</label>
+									<input id="prenom" type="text" class="form-control" name="prenom" required>
+									<div class="invalid-feedback">
+										Quel est votre prénom
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="datenaissance">Téléphone</label>
+									<input id="numtel" type="number" class="form-control" name="numtel" required data-eye>
+									<div class="invalid-feedback">
+										Renseigner votre contact
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="datenaissance">Date de naissance</label>
+									<input id="datenaissance" type="date" class="form-control" name="datenaissance" required data-eye>
+									<div class="invalid-feedback">
+										Votre date de naissance
+									</div>
+								</div>
+								<div class="form-group"> <!--on peut y mettre un balise select vu kon connait deja les possibilités-->
+									<label for="classe">Niveau d'étude</label>
+									<input id="classe" type="text" class="form-control" name="classe" required data-eye>
+									<div class="invalid-feedback">
+										Votre niveau ( la classe actuelle) 
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="encadreur">Votre encadreur</label>
+									<input id="encadreur" type="text" class="form-control" name="encadreur" required data-eye>
+									<div class="invalid-feedback">
+										Qui est votre encadreur
+									</div>
+								</div>						
+
+								<div class="form-group m-0">
+									<button type="submit" class="btn btn-primary btn-block">
+										S'inscrire
+									</button>
+								</div>
+								<div class="mt-4 text-center">
+									Disposez déja d'un compte? Alors <a href="/etudiant/login">Login</a>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="footer">
+						Copyright &copy; 2021 &mdash;Team Ethical Hackers 
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!--script src="js/my-login.js"></script-->
+</body>
+</html>
