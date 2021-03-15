@@ -1,55 +1,30 @@
+<form #userForm="ngForm">
+    <div class="imgcontainer mb-1">
+        <img src="assets/images/logo2.jpg" alt="Avatar" class="avatar">
+    </div>
 
-<div class="glob container">
-    <h1 id="title" class="title">Login</h1>
-<p class="sub-title">Hello! Log in with your email.</p>
+    <div class="container">
+        <p  class="alert alert-danger"></p>
+        <div class="form-group col-md-12 mt-1 mb-1">
+            <label><b>E-mail</b></label>
+            <span class="text-danger">*</span>
+            <input type="text" placeholder="exemple@exemple.com" name="login" required  class="form-control" >
+            <div>
+                <small class="text-danger" > Veuillez saisir votre login </small>
+                <small class="text-danger" > Veuillez saisir l'adresse email au bon format</small>
+            </div>
+        </div>
+        <div class="form-group col-md-12">
+            <label><b>Mot de passe</b></label>
+            <span class="text-danger">*</span>
+            <input type="password" placeholder="******" name="password" required  class="form-control" id="password" >
+            <small class="text-danger" > Veuillez saisir votre mot de passe </small>
+        </div>
+        <button  type="submit" class="btn btn-success">Login</button>
 
-<form >
+    </div>
 
-  <div class="form-control-group">
-    <label class="label" for="input-email">Email address:</label>
-    <input fullWidth
-           name="email"
-           id="input-email"
-           pattern=".+@.+\..+"
-           placeholder="Email address"
-           fieldSize="large"
-           autofocus
-           >
-    
-  </div>
-
-  <div class="form-control-group">
-    <span class="label-with-link">
-      <label class="label" for="input-password">Password:</label>
-      <a class="forgot-password caption-2" routerLink="../request-password">Forgot Password?</a>
-    </span>
-    <input 
-           fullWidth
-           name="password"
-           type="password"
-           id="input-password"
-           placeholder="Password"
-           fieldSize="large">
-    
-  </div>
-
- 
-
-  <button fullWidth
-          status="primary"
-          size="large">
-    Log In
-  </button>
+    <div class="container" style="background-color:#f1f1f1">
+        <span class="psw">Mot de passe<a href="#"> oublié?</a></span>
+    </div>
 </form>
-
-<section class="links" aria-label="Social sign in">
-  or enter with:
-  <div class="socials">
-    
-  </div>
-</section>
-
-<section class="another-action" aria-label="Register">
-  Don't have an account? <a class="text-link" routerLink="../register">Register</a>
-</section>
-</div>

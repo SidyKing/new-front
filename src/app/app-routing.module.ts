@@ -1,16 +1,62 @@
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {
+  NbAuthComponent,
+  NbLogoutComponent,
+  NbResetPasswordComponent,
+} from '@nebular/auth';
 
-const routes: Routes = [
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { MotDePasseOublierComponent } from './auth/mot-de-passe-oublier/mot-de-passe-oublier.component';
+
+export const routes: Routes = [
   {
-    path: 'etudiant',
-    loadChildren: () =>
-      import('./auth/auth.module').then(m => m.AuthModule)
+    path: 'pages',
+    loadChildren: () => import('./pages/pages.module')
+      .then(m => m.PagesModule),
   },
+  {
+    path: 'auth',
+    component: NbAuthComponent,
+    children: [
+      {
+        path: '',
+        component: LoginComponent,
+      },
+      {
+        path: 'login',
+        component: LoginComponent,
+      },
+      {
+        path: 'register',
+        component: RegisterComponent,
+      },
+      {
+        path: 'logout',
+        component: NbLogoutComponent,
+      },
+      {
+        path: 'MotDePasseOublier',
+        component: MotDePasseOublierComponent,
+      },
+      {
+        path: 'reset-password',
+        component: NbResetPasswordComponent,
+      },
+    ],
+  },
+  { path: '', redirectTo: 'auth', pathMatch: 'full' },
+  { path: '**', redirectTo: 'auth' },
 ];
 
+const config: ExtraOptions = {
+  useHash: false,
+};
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, config)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
