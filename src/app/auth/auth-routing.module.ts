@@ -14,7 +14,7 @@ const routes: Routes = [
         component: LoginComponent,
       },
       {
-        path: 'pageMotDePasseOublier',
+        path: 'MotDePasseOublier',
         component: MotDePasseOublierComponent,
       }
     ]
