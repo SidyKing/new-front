@@ -1,10 +1,10 @@
 <form #userForm="ngForm">
-    <div class="imgcontainer mb-1">
-        <img src="assets/images/logo2.jpg" alt="Avatar" class="avatar">
-    </div>
+    <!--div class="imgcontainer mb-1">
+        <img src="../../../assets/images/logo_uadb_1.png" alt="Avatar" class="avatar">
+    </div-->
 
     <div class="container">
-        <p  class="alert alert-danger"></p>
+        <p class="alert alert-danger"></p>
         <div class="form-group col-md-12 mt-1 mb-1">
             <label><b>E-mail</b></label>
             <span class="text-danger">*</span>
@@ -26,5 +26,6 @@
 
     <div class="container" style="background-color:#f1f1f1">
         <span class="psw">Mot de passe<a href="#"> oublié?</a></span>
+        <span class="psw">S'inscrire ?<a routerLink="/auth/register"> Créer un compte</a></span>
     </div>
 </form>

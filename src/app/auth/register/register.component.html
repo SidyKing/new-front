@@ -1,1 +1,130 @@
-<p>register works!</p>
+<section>
+    <h2 align=center class="card-title mb-4">S'inscrire et créer votre compte</h2>
+        <p align=center><strong>VEUILLER CHOISIR VOTRE PROFIL</strong></p>
+            <div align=center class="container">
+                <button type="button" class="btn btn-primary pr-4 pl-4 pt-2 pb-2 mr-4" (click)="openModal(template_prof)">Profil Professeur</button>
+                <button type="button" class="btn btn-secondary pr-4 pl-4 pt-2 pb-2 ml-4" (click)="openModal(template_etu)">Profil Etudiant</button>
+            </div><br>
+
+            <div class="mt-4 text-center">
+                Disposez déjà d'un compte? Alors <a routerLink="/etudiant/login">Login</a>
+            </div>
+
+            <ng-template #template_prof>
+                <form method="POST">
+                        <div class="modal-header">
+                          <h4 class="modal-title pull-left">Formulaire Professeur</h4>
+                          <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="login">Login</label>
+                                <input id="login" type="text" class="form-control" name="login" required autofocus>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="email" type="email" class="form-control" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Mot de passe</label>
+                                <input id="password" type="password" class="form-control" name="password" required data-eye>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="numTel">Numéro Téléphone</label>
+                                <input id="numTel" type="number" class="form-control" name="numTel" required data-eye>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nomProf">Nom Professeur</label>
+                                <input id="nomProf" type="text" class="form-control" name="nomProf" required data-eye>
+                              </div>
+
+                              <div class="form-group">
+                                <label for="prenomProf">Prénom Professeur </label>
+                                <input id="prenomProf" type="text" class="form-control" name="prenomProf" required data-eye>
+                              </div>
+                            <div class="form-group">
+                                <label for="Profil">Profil</label>
+                                <input id="Profil" type="text" class="form-control" name="Profil" required data-eye>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="matricule">Matricule</label>
+                                <input id="matricule" type="text" class="form-control" name="matricule" required data-eye>
+                            </div>
+                            <div class="form-group m-0">
+                                <button type="submit" name="dataProf" class="btn btn-success" >
+                                    Envoyer
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+            </ng-template>
+
+            <ng-template #template_etu>
+                <form method="POST">
+                        <div class="modal-header">
+                          <h4 class="modal-title pull-left">Formulaire Etudiant</h4>
+                          <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                         
+                          <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input id="nom" type="text" class="form-control" name="nom" required data-eye>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="prenom">Prénom </label>
+                            <input id="prenom" type="text" class="form-control" name="prenom" required autofocus>
+                          </div>
+                          
+                            <div class="form-group">
+                                <label for="login">Login</label>
+                                <input id="login" type="text" class="form-control" name="login" required autofocus>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="email" type="email" class="form-control" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Mot de passe</label>
+                                <input id="password" type="password" class="form-control" name="password" required data-eye>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="numTel">Téléphone ( +221 -- --- -- -- ) </label>
+                                <input id="numTel" type="number" class="form-control" name="numTel" required data-eye>
+                            </div>
+
+                          <div class="form-group">
+                            <label for="classe">Classe</label>
+                            <input id="classe" type="text" class="form-control" name="classe" required data-eye>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="dateNaissance">Date de naissance</label>
+                            <input id="dateNaissance" type="date" class="form-control" name="dateNaissance" required data-eye>
+                          </div>
+
+                          <div class="form-group m-0">
+                            <button type="submit" name="dataEtudiant" (click)="add" class="btn btn-primary" >
+                                Soumettre
+                            </button>
+                          </div>
+                        </div>
+                    </form>
+            </ng-template>
+
+		
+</section>

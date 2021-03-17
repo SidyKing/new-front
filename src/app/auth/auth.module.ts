@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
@@ -17,6 +17,10 @@ import { RegisterComponent } from './register/register.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
+  ],
+  schemas:[ ////// ------inclus dans ce module pour accepter les balises de ngx-bootstrap en cas de génération d'erreurs
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA 
   ]
 })
 export class AuthModule { }

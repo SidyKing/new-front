@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import {AuthComponent} from './auth.component';
-import {LoginComponent} from './login/login.component';
+import { AuthComponent } from './auth.component';
+import { LoginComponent}  from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 import { MotDePasseOublierComponent } from './mot-de-passe-oublier/mot-de-passe-oublier.component';
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent,
+      },
+      {
+        path: 'register',
+        component: RegisterComponent,
       },
       {
         path: 'pageMotDePasseOublier',
