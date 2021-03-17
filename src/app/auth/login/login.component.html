@@ -1,4 +1,4 @@
-<form #userForm="ngForm">
+<form [formGroup]='loginForm' (ngSubmit)= 'onSubmit()'>
   <div class="imgcontainer mb-1">
       <img src="assets/images/logo2.jpg" alt="Avatar" class="avatar">
   </div>
@@ -8,16 +8,16 @@
       <div class="form-group col-md-12 mt-1 mb-1">
           <label><b>E-mail</b></label>
           <span class="text-danger">*</span>
-          <input type="text" placeholder="exemple@exemple.com" name="login" required  class="form-control" >
+          <input type="text" placeholder="exemple@exemple.com" formControlName="email" required  class="form-control" >
           <div>
-              <small class="text-danger" > Veuillez saisir votre login </small>
-              <small class="text-danger" > Veuillez saisir l'adresse email au bon format</small>
+              <small class="text-danger" > {{message}} </small>
+              <small class="text-danger" > </small>
           </div>
       </div>
       <div class="form-group col-md-12">
           <label><b>Mot de passe</b></label>
           <span class="text-danger">*</span>
-          <input type="password" placeholder="******" name="password" required  class="form-control" id="password" >
+          <input type="password" placeholder="******" formControlName="password" required  class="form-control" id="password" >
           <small class="text-danger" > Veuillez saisir votre mot de passe </small>
       </div>
       <button  type="submit" class="btn btn-success">Login</button>
